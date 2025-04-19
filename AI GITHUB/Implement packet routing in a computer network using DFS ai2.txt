@@ -1,0 +1,90 @@
+Implement packet routing in a computer network using DFS
+and BFS.
+
+import matplotlib.pyplot as plt import
+networkx as nx
+from collections import deque
+# Create the network graph network_graph
+= nx.Graph()
+
+
+# Define nodes using alphabets
+nodes = ["A", "B", "C", "D", "E", "F", "G", "H"]
+network_graph.add_nodes_from(nodes)
+# Define edges between the nodes edges
+= [
+("A", "B"),
+("B", "C"),
+("C", "D"),
+("D", "E"),
+("E", "F"),
+("F", "G"),
+("G", "H"),
+("A", "D"), # Direct connection between A and D
+("F", "C") # Direct connection between F and C
+]
+network_graph.add_edges_from(edges)
+# Visualize the network graph plt.figure(figsize=(8, 6)) pos =
+nx.spring_layout(network_graph, seed=42) nx.draw_networkx_nodes(network_graph,
+pos, node_size=700, node_color="lightgreen") nx.draw_networkx_edges(network_graph,
+pos, style='solid', edge_color="black") nx.draw_networkx_labels(network_graph, pos,
+font_size=10, font_color="black")
+
+# Highlight the best path (either BFS or DFS) def
+highlight_best_path(path, color="red"):
+edge_list = list(zip(path, path[1:])) # Create edges from consecutive nodes in path
+nx.draw_networkx_edges(network_graph, pos, edgelist=edge_list, edge_color=color,
+width=2)
+# Define BFS algorithm to find the shortest path def
+bfs(network_graph, start, goal):
+visited = set() queue =
+deque([[start]]) while
+queue: path =
+queue.popleft() node =
+path[-1]
+if node == goal:
+return path
+if node not in visited:
+visited.add(node)
+for neighbor in network_graph.neighbors(node):
+new_path = list(path)
+new_path.append(neighbor)
+queue.append(new_path)
+return None
+
+# Define DFS algorithm to find the first path def
+dfs(network_graph, start, goal, path=None, visited=None):
+if path is None:
+path = [start] if
+visited is None:
+visited = set()
+visited.add(start)
+if start == goal:
+return path
+for neighbor in network_graph.neighbors(start):
+if neighbor not in visited:
+new_path = dfs(network_graph, neighbor, goal, path + [neighbor], visited)
+if new_path:
+return new_path
+return None
+# Test with nodes "A" and "H"
+source_node = "A" destination_node
+= "H"
+print(f"Source Node: {source_node}") print(f"Destination
+Node: {destination_node}") 
+
+# BFS and DFS paths bfs_path = bfs(network_graph,
+source_node, destination_node) print("BFS Path:", bfs_path)
+dfs_path = dfs(network_graph, source_node, destination_node) print("DFS
+Path:", dfs_path)
+# All possible paths between the source and destination all_paths =
+list(nx.all_simple_paths(network_graph, source_node, destination_node)) print("All
+Possible Paths:", all_paths)
+# Highlight the best path for BFS (blue) and DFS (green) highlight_best_path(bfs_path,
+color="blue") # Highlight BFS path in blue highlight_best_path(dfs_path,
+color="green") # Highlight DFS path in green
+# Add a legend to explain the colors
+plt.legend(["BFS Path (Blue)", "DFS Path (Green)"], loc="upper left")
+# Display the graph with the highlighted best paths plt.title("Network
+Map - Highlighted BFS and DFS Paths", fontsize=14) plt.show()
+

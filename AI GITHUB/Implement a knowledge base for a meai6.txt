@@ -1,0 +1,29 @@
+Implement a knowledge base for a medical diagnosis system using Prolog.
+
+
+% Facts defining diseases and their symptoms
+symptom(flu, fever).
+symptom(flu, cough).
+symptom(flu, headache).
+symptom(common_cold, sneezing).
+symptom(common_cold, runny_nose).
+symptom(common_cold, sore_throat).
+symptom(covid_19, fever).
+symptom(covid_19, cough).
+symptom(covid_19, loss_of_taste).
+
+% Rule to diagnose disease based on symptoms
+diagnose(Disease) :-
+    symptom(Disease, Symptom1),
+    symptom(Disease, Symptom2),
+    Symptom1 \= Symptom2, % Ensure the symptoms are distinct
+    write('The patient may have '), write(Disease), nl.
+
+% Rule to check for multiple diagnoses based on symptoms
+diagnose_multiple :-
+    diagnose(Disease),
+    fail.  % Forces Prolog to backtrack and find all possible solutions
+diagnose_multiple.  % Stops when no more diseases can be found
+
+% Initialization goal to execute the diagnosis
+:- initialization(diagnose_multiple).

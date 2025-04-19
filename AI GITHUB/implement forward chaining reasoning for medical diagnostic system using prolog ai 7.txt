@@ -1,0 +1,81 @@
+Implement forward chaining reasoning for Medical Diagnosis System Using Prolog.
+
+
+% Facts defining symptoms
+symptom_present(fever).
+symptom_present(cough).
+symptom_present(sneezing).
+symptom_present(runny_nose).
+symptom_present(loss_of_taste).
+symptom_present(sore_throat).
+symptom_present(body_aches).
+symptom_present(fatigue).
+symptom_present(chills).
+symptom_present(headache).
+symptom_present(weight_loss).
+symptom_present(night_sweats).
+symptom_present(difficulty_breathing).
+
+% Rule 1: If the patient has fever and cough, diagnose flu
+diagnose :-
+    symptom_present(fever),
+    symptom_present(cough),
+    write('The patient may have Flu.\n'),
+    write('Common symptoms of Flu: fever, cough, body aches, fatigue.\n'),
+    write('Recommended action: Get rest, stay hydrated, and consult a doctor if symptoms persist.\n\n').
+
+% Rule 2: If the patient has sneezing and runny nose, diagnose common cold
+diagnose :-
+    symptom_present(sneezing),
+    symptom_present(runny_nose),
+    write('The patient may have Common Cold.\n'),
+    write('Common symptoms of Common Cold: sneezing, runny nose, sore throat.\n'),
+    write('Recommended action: Rest, drink fluids, and take over-the-counter medicine for relief.\n\n').
+
+% Rule 3: If the patient has fever, cough, and loss of taste, diagnose COVID-19
+diagnose :-
+    symptom_present(fever),
+    symptom_present(cough),
+    symptom_present(loss_of_taste),
+    write('The patient may have COVID-19.\n'),
+    write('Common symptoms of COVID-19: fever, cough, loss of taste or smell, shortness of breath.\n'),
+    write('Recommended action: Isolate yourself, get tested for COVID-19, and follow government guidelines.\n\n').
+
+% Rule 4: If the patient has sore throat, fever, and body aches, diagnose Strep Throat
+diagnose :-
+    symptom_present(sore_throat),
+    symptom_present(fever),
+    symptom_present(body_aches),
+    write('The patient may have Strep Throat.\n'),
+    write('Common symptoms of Strep Throat: sore throat, fever, body aches.\n'),
+    write('Recommended action: Visit a doctor for a throat culture or rapid strep test, and take antibiotics if prescribed.\n\n').
+
+% Rule 5: If the patient has fever, chills, and fatigue, diagnose Malaria
+diagnose :-
+    symptom_present(fever),
+    symptom_present(chills),
+    symptom_present(fatigue),
+    write('The patient may have Malaria.\n'),
+    write('Common symptoms of Malaria: fever, chills, fatigue, sweating.\n'),
+    write('Recommended action: Seek medical attention immediately for blood tests and antimalarial treatment.\n\n').
+
+% Rule 6: If the patient has chronic cough, weight loss, and night sweats, diagnose Tuberculosis (TB)
+diagnose :-
+    symptom_present(cough),
+    symptom_present(weight_loss),
+    symptom_present(night_sweats),
+    write('The patient may have Tuberculosis (TB).\n'),
+    write('Common symptoms of TB: chronic cough, weight loss, night sweats, fatigue.\n'),
+    write('Recommended action: Consult a healthcare provider for a TB test and start treatment if necessary.\n\n').
+
+% Rule 7: If the patient has fever, cough, and difficulty breathing, diagnose Pneumonia
+diagnose :-
+    symptom_present(fever),
+    symptom_present(cough),
+    symptom_present(difficulty_breathing),
+    write('The patient may have Pneumonia.\n'),
+    write('Common symptoms of Pneumonia: fever, cough, difficulty breathing, chest pain.\n'),
+    write('Recommended action: Seek urgent medical care for diagnosis, imaging (X-ray), and antibiotic treatment.\n\n').
+
+% Initialization goal to run the diagnosis when the program starts
+:- initialization(diagnose).
