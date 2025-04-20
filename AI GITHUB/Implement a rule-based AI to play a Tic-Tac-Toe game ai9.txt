@@ -1,5 +1,16 @@
 Implement a rule-based AI to play a Tic-Tac-Toe game.
 
+1. Install SWI-Prolog: Ensure that SWI-Prolog is installed on your system. 
+2. Create a Prolog file: Open a text editor and save the file with a .pl extension, e.g., 
+tic_tac_toe.pl. 
+3. Define the Board Representation: Use a list to represent the 3x3 game board. 
+4. Implement Winning and Blocking Rules: Define Prolog rules to check for winning 
+moves and blocking opponent moves. 
+5. Implement AI Move Selection: Use rules to determine the best possible move for the 
+AI. 
+6. Query the System: Use Prolog queries to test the AI’s decision-making. 
+
+
 
 % Define winning conditions
 win(Player, Board) :-
