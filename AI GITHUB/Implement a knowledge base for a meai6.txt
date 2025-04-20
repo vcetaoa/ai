@@ -1,5 +1,15 @@
 Implement a knowledge base for a medical diagnosis system using Prolog.
 
+Procedure:  
+1. Install SWI-Prolog: Ensure that SWI-Prolog is installed on your system.  
+2. Create a Prolog file: Open a text editor and save the file with a .pl extension, e.g., 
+medical_diagnosis.pl.  
+3. Define the Knowledge Base: List symptoms and corresponding diseases using facts 
+and rules.  
+4. Implement the Rule-based System: Use conditional rules to infer the disease based 
+on symptoms.  
+5. Query the System: Use Prolog queries to test the diagnosis system. 
+
 
 % Facts defining diseases and their symptoms
 symptom(flu, fever).
@@ -27,3 +37,10 @@ diagnose_multiple.  % Stops when no more diseases can be found
 
 % Initialization goal to execute the diagnosis
 :- initialization(diagnose_multiple).
+
+
+
+QUERY TO PERFROM 
+Expected Output:  
+?- diagnose(Disease).  
+The patient may have flu. 
