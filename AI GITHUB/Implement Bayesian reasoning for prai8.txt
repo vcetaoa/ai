@@ -1,5 +1,16 @@
 Implement Bayesian reasoning for probabilistic inference for Weather prediction.
 
+Procedure: 
+1. Install SWI-Prolog: Ensure that SWI-Prolog is installed on your system. 
+2. Create a Prolog file: Open a text editor and save the file with a .pl extension, e.g., 
+weather_prediction.pl. 
+3. Define Prior Probabilities: Assign prior probabilities to different weather conditions. 
+4. Define Conditional Probabilities: Use conditional probabilities to model the 
+relationship between observed evidence (e.g., clouds, humidity) and weather 
+conditions. 
+5. Implement Bayesian Inference: Use Prolog rules to compute posterior probabilities 
+based on evidence. 
+6. Query the System: Use Prolog queries to test the weather prediction system.
 
 
 % Prior probabilities for weather conditions
@@ -29,4 +40,6 @@ prior(Weather, Prior),
 run_sample_query :-
     bayes(sunny, cloudy_given_sunny, P),
     write('Posterior Probability: '), write(P), nl.
+
+
 
