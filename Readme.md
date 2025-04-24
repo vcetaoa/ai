@@ -151,5 +151,5 @@ This repository contains implementations of classical algorithms and problem-sol
 
 **Python files:**
 ```bash
-python3 filename.py
+python filename.py
 
