@@ -5,8 +5,8 @@ This document summarizes key graph traversal, search, and problem-solving algori
 ---
 
 ## 🔗 Useful Resources
-- [AI Algorithms Cheat Sheet](https://tinyurl.com/AI9869)
-- [Algorithm Visualization Tools](https://bit.ly/cnis1)
+- [https://tinyurl.com/AI9869](https://tinyurl.com/AI9869)
+- [Algorithm codeee A_1](https://bit.ly/cnis1)](https://bit.ly/cnis1)
 
 ---
 
