@@ -6,7 +6,7 @@ This document summarizes key graph traversal, search, and problem-solving algori
 
 ## 🔗 Useful Resources
 - [https://tinyurl.com/AI9869](https://tinyurl.com/AI9869)
-- [Algorithm codeee A_1](https://bit.ly/cnis1)](https://bit.ly/cnis1)
+- [https://bit.ly/cnis1](https://bit.ly/cnis1)
 
 ---
 
