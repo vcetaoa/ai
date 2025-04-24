@@ -1,4 +1,14 @@
-# Algorithm Compendium
+# Algorithm Compendium 📚
+
+This document summarizes key graph traversal, search, and problem-solving algorithms with their characteristics, use cases, and comparisons.
+
+---
+
+## 🔗 Useful Resources
+- [AI Algorithms Cheat Sheet](https://tinyurl.com/AI9869)
+- [Algorithm Visualization Tools](https://bit.ly/cnis1)
+
+---
 
 This document summarizes key graph traversal, search, and problem-solving algorithms with their characteristics, use cases, and comparisons.
 
