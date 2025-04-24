@@ -2,39 +2,6 @@
 
 This repository contains implementations of classical algorithms and problem-solving techniques in Python and Prolog, demonstrating different programming paradigms for artificial intelligence applications.
 
-### 🔍 Search Algorithms  
-| File | Algorithm | Description |  
-|------|-----------|-------------|  
-| `01_dfs.py` | Depth-First Search | Uninformed graph traversal |  
-| `02_bfs.py` | Breadth-First Search | Shortest path finder |  
-| `03_A_star.py` | A* Search | Heuristic-based pathfinding |  
-
-### 🧩 Puzzle Solvers  
-| File | Algorithm | Description |  
-|------|-----------|-------------|  
-| `04_Eight_Puzzle.py` | A* Algorithm | 8-tile sliding puzzle solver |  
-| `05_Tower_Hanoi.py` | Recursive Solution | Classic tower puzzle |  
-
-### 🤖 Logic Programming  
-| File | Type | Description |  
-|------|------|-------------|  
-| `06_knowledge_base.pl` | Prolog KB | Rule-based knowledge system |  
-| `07_diagnosis.pl` | Prolog | Diagnostic expert system |  
-
-### 🌦️ Weather Prediction  
-| File | Language | Approach |  
-|------|----------|----------|  
-| `08_Weather_Prediction.pl` | Prolog | Logic-based prediction |  
-| `09_Weather_Prediction.py` | Python | Data-driven prediction |  
-
-### 🎮 Game AI  
-| File | Language | Algorithm |  
-|------|----------|-----------|  
-| `09_Tic_tac_toe.pl` | Prolog | Rule-based AI |  
-| `09_Tic_tac_toe.py` | Python | Minimax algorithm |  
-
----
-
 
 ## Table of Contents
 - [Search Algorithms](#search-algorithms)
@@ -152,4 +119,39 @@ This repository contains implementations of classical algorithms and problem-sol
 **Python files:**
 ```bash
 python filename.py
+```
+
+### 🔍 Search Algorithms  
+| File | Algorithm | Description |  
+|------|-----------|-------------|  
+| `01_dfs.py` | Depth-First Search | Uninformed graph traversal |  
+| `02_bfs.py` | Breadth-First Search | Shortest path finder |  
+| `03_A_star.py` | A* Search | Heuristic-based pathfinding |  
+
+### 🧩 Puzzle Solvers  
+| File | Algorithm | Description |  
+|------|-----------|-------------|  
+| `04_Eight_Puzzle.py` | A* Algorithm | 8-tile sliding puzzle solver |  
+| `05_Tower_Hanoi.py` | Recursive Solution | Classic tower puzzle |  
+
+### 🤖 Logic Programming  
+| File | Type | Description |  
+|------|------|-------------|  
+| `06_knowledge_base.pl` | Prolog KB | Rule-based knowledge system |  
+| `07_diagnosis.pl` | Prolog | Diagnostic expert system |  
+
+### 🌦️ Weather Prediction  
+| File | Language | Approach |  
+|------|----------|----------|  
+| `08_Weather_Prediction.pl` | Prolog | Logic-based prediction |  
+| `09_Weather_Prediction.py` | Python | Data-driven prediction |  
+
+### 🎮 Game AI  
+| File | Language | Algorithm |  
+|------|----------|-----------|  
+| `09_Tic_tac_toe.pl` | Prolog | Rule-based AI |  
+| `09_Tic_tac_toe.py` | Python | Minimax algorithm |  
+
+---
+
 
