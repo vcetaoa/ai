@@ -6,7 +6,7 @@ This document summarizes key graph traversal, search, and problem-solving algori
 ### 🛠️ Troubleshooting Guide
 If you encounter any issues with the code implementations:
 
-**👉 [Visit Our AI Code Fixer Portal](https://tinyurl.com/AI9869)** 
+**👉 [Visit Our AI Code Fixer Portal](https://tinyurl.com/)** 
 
 ---
 
